@@ -1,0 +1,533 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>后端开发</name>
+    </assembly>
+    <members>
+        <member name="M:后端开发.Controllers.AdminController.GetPatiAppForms">
+            <summary>
+            获取患者请求列表清单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.AdminController.GetDocAppForms">
+            <summary>
+            获取医生请求列表清单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.AdminController.GetReportForms">
+            <summary>
+            获取举报列表清单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.AdminController.GetPatiApp(System.String)">
+            <summary>
+            查看详细患者请求内容
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.AdminController.GetDocApp(System.String)">
+            <summary>
+            查看详细医生请求内容
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.AdminController.GetReport(System.String)">
+            <summary>
+            查看详细举报内容
+            </summary>
+            <param name="number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.AdminController.AuditPatiApp(System.String,System.String)">
+            <summary>
+            审核患者请求
+            </summary>
+            <param name="req_number"></param>
+            <param name="Admin_ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.AdminController.AuditDocApp(System.String,System.String)">
+            <summary>
+            审核医生请求
+            </summary>
+            <param name="req_number"></param>
+            <param name="Admin_ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.AdminController.AuditReport(System.String,System.String)">
+            <summary>
+            审核举报
+            </summary>
+            <param name="report_number"></param>
+            <param name="Admin_ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.AdminController.PostNotice(System.String,System.String,System.String)">
+            <summary>
+            管理员发布公告
+            </summary>
+            <param name="noticeName"></param>
+            <param name="content"></param>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.AdminController.DeleteNotice(System.String)">
+            <summary>
+            管理员删除公告
+            </summary>
+            <param name="noticeID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.BaseController.GetNoticeList">
+            <summary>
+            获取公告列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.BaseController.GetNotice(System.String)">
+            <summary>
+            查看公告详细内容
+            </summary>
+            <param name="Notice_ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.BaseController.PostChat(System.String,System.String,System.String,System.String)">
+            <summary>
+            发送聊天信息
+            </summary>
+            <param name="client_id"></param>
+            <param name="server_id"></param>
+            <param name="content"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.BaseController.GetChat(System.String,System.String)">
+            <summary>
+            获取聊天信息
+            </summary>
+            <param name="client_ID"></param>
+            <param name="server_ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.DoctorController.Login(System.String,System.String)">
+            <summary>
+            医生登录
+            </summary>
+            <param name="id"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.DoctorController.GetDoctor(System.String)">
+            <summary>
+            获取医生个人信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.DoctorController.Register(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            医生注册
+            </summary>
+            <param name="identification"></param>
+            <param name="name"></param>
+            <param name="password"></param>
+            <param name="workingAge"></param>
+            <param name="sex"></param>
+            <param name="title"></param>
+            <param name="hosname"></param>
+            <param name="department"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.DoctorController.ModInfor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            医生修改个人信息
+            </summary>
+            <param name="ID"></param>
+            <param name="identification"></param>
+            <param name="name"></param>
+            <param name="password"></param>
+            <param name="workingAge"></param>
+            <param name="sex"></param>
+            <param name="title"></param>
+            <param name="hosname"></param>
+            <param name="department"></param>
+            <param name="introduction"></param>
+            <param name="picture_number"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.DoctorController.GetPatient(System.String)">
+            <summary>
+            获取患者个人信息
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.DoctorController.GetRecords(System.String)">
+            <summary>
+            医生查询问诊记录
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.DoctorController.PostPre(System.String,System.String,System.String,System.DateTime,System.String)">
+            <summary>
+            医生开具电子处方
+            </summary>
+            <param name="Pati_ID"></param>
+            <param name="Doctor_ID"></param>
+            <param name="department"></param>
+            <param name="time"></param>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.DoctorController.ModDisease(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            医生修改疾病信息
+            </summary>
+            <param name="Doctor_ID"></param>
+            <param name="Disease_name"></param>
+            <param name="Pathogeny"></param>
+            <param name="Symptoms"></param>
+            <param name="Complication"></param>
+            <param name="Medication"></param>
+            <param name="Introduction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.DoctorController.PostReport(System.String,System.String,System.DateTime,System.String)">
+            <summary>
+            医生发起举报
+            </summary>
+            <param name="pati_id"></param>
+            <param name="doctor_id"></param>
+            <param name="time"></param>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.DoctorController.PostApp(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            医生提交请求
+            </summary>
+            <param name="ID"></param>
+            <param name="workingAge"></param>
+            <param name="hosName"></param>
+            <param name="department"></param>
+            <param name="introduction"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.DoctorController.PostInclude(System.String,System.String,System.String,System.String)">
+            <summary>
+            提交包含表
+            </summary>
+            <param name="m_name"></param>
+            <param name="p_id"></param>
+            <param name="quantity"></param>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.DoctorController.GetReservationLists(System.String)">
+            <summary>
+            医生查询预约信息
+            </summary>
+            <param name="doctor_id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.DoctorController.UpdateReservation(System.String,System.String)">
+            <summary>
+            医生修改预约表状态
+            </summary>
+            <param name="reservation_number"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.Login(System.String,System.String)">
+            <summary>
+            患者登录
+            </summary>
+            <param name="ID"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.Register(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            患者注册
+            </summary>
+            <param name="name"></param>
+            <param name="password"></param>
+            <param name="tel"></param>
+            <param name="identification"></param>
+            <param name="sex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetPatient(System.String)">
+            <summary>
+            获取患者信息
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetDoctor(System.String)">
+            <summary>
+            获取医生信息
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.ModInfor(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            患者修改个人信息
+            </summary>
+            <param name="ID"></param>
+            <param name="name"></param>
+            <param name="password"></param>
+            <param name="tel"></param>
+            <param name="identification"></param>
+            <param name="sex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetDisease(System.String)">
+            <summary>
+            患者查询疾病信息
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetDoctorList">
+            <summary>
+            患者获取医生列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.PostRating(System.String,System.String,System.String,System.String)">
+            <summary>
+            患者提交医生评价表
+            </summary>
+            <param name="pati_id"></param>
+            <param name="doctor_id"></param>
+            <param name="time"></param>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetRatingForm(System.String)">
+            <summary>
+            患者查看医生评价列表
+            </summary>
+            <param name="doctor_id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.PostReservation(System.String,System.String,System.DateTime,System.String)">
+            <summary>
+            患者提交预约信息
+            </summary>
+            <param name="pati_id"></param>
+            <param name="doctor_id"></param>
+            <param name="time"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetReservations(System.String)">
+            <summary>
+            患者查询预约信息
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetCart(System.String)">
+            <summary>
+            患者获取购物车
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetDrugsByType(System.String)">
+            <summary>
+            患者通过药物种类来查询药物
+            </summary>
+            <param name="category"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetDrugByName(System.String)">
+            <summary>
+            患者通过药物名字来查询药物
+            </summary>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetDrugInforList">
+            <summary>
+            患者获取药物信息列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.AddDrug(System.String,System.String,System.Int32)">
+            <summary>
+            患者向购物车加入药物或者减少药物
+            </summary>
+            <param name="Medicine_ID"></param>
+            <param name="Pati_ID"></param>
+            <param name="quantity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.EmptyCart(System.String)">
+            <summary>
+            患者清空购物车
+            </summary>
+            <param name="Pati_ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.PostApp(System.String,System.DateTime,System.String)">
+            <summary>
+            患者提交请求
+            </summary>
+            <param name="ID"></param>
+            <param name="time"></param>
+            <param name="content"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetDepartmentToHos">
+            <summary>
+            患者获取科室所属医院表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.CancelAccount(System.String)">
+            <summary>
+            患者注销账号
+            </summary>
+            <param name="ID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.PostAppOfNuc(System.String,System.String,System.String)">
+            <summary>
+            患者预约核算检测
+            </summary>
+            <param name="pati_id"></param>
+            <param name="hos_name"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetAppsOfNuc(System.String)">
+            <summary>
+            患者查询核算检验预约记录
+            </summary>
+            <param name="pati_id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetDepartmentList">
+            <summary>
+            获取科室列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetHospitalList">
+            <summary>
+            获取医院列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetIncludeList(System.String)">
+            <summary>
+            获取包含列表
+            </summary>
+            <param name="pre_id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.PostOfflineApp(System.String,System.String,System.String,System.DateTime)">
+            <summary>
+            患者提交线下问诊表
+            </summary>
+            <param name="pati_id"></param>
+            <param name="hos_name"></param>
+            <param name="department"></param>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetOfflineAppList(System.String)">
+            <summary>
+            患者查看线下预约记录
+            </summary>
+            <param name="pati_id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetPatiInfor(System.String)">
+            <summary>
+            获取患者健康信息
+            </summary>
+            <param name="pati_id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.PostPatiInfor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            患者提交健康信息
+            </summary>
+            <param name="id"></param>
+            <param name="height"></param>
+            <param name="weight"></param>
+            <param name="BMI"></param>
+            <param name="heartRate"></param>
+            <param name="systolic_pressure"></param>
+            <param name="diastolic_pressure"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetPre(System.String,System.String)">
+            <summary>
+            患者获取电子处方
+            </summary>
+            <param name="pati_id"></param>
+            <param name="doctor_id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetDiseaseList">
+            <summary>
+            患者获取疾病列表信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.GetHospital(System.String)">
+            <summary>
+            患者根据医院名获取医院信息
+            </summary>
+            <param name="hos_name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.AutoAddDrug(System.String,System.String)">
+            <summary>
+            患者自动加购药品
+            </summary>
+            <param name="pati_id"></param>
+            <param name="pre_id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.UpdateReservation(System.String,System.String)">
+            <summary>
+            患者修改预约表状态
+            </summary>
+            <param name="reservation_number"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.RectifyNucleicApp(System.String,System.DateTime,System.String)">
+            <summary>
+            患者修改核算预约状态
+            </summary>
+            <param name="pati_id"></param>
+            <param name="time"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+        <member name="M:后端开发.Controllers.PatientController.RectifyOfflineApp(System.String,System.DateTime,System.String)">
+            <summary>
+            患者修改线下预约状态
+            </summary>
+            <param name="pati_id"></param>
+            <param name="time"></param>
+            <param name="status"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
